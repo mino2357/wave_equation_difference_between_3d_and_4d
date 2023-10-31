@@ -227,7 +227,7 @@ fn main() {
     vec_3d.initialize();
     for i in 0..sim_num {
         vec_3d.draw(i);
-        println!("{:.10} {:.10}", i as f64 * vec_3d.delta_t, vec_3d.x_1[size/2][size/2][size/2]);
+        println!("{:.10} {:.10}", i as f64 * interval as f64 * vec_3d.delta_t, vec_3d.x_1[size/2][size/2][size/2]);
         for _ in 0..interval {
             vec_3d.step();
         }
